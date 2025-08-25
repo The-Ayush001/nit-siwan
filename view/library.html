@@ -1,0 +1,332 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NIT Siwan</title>
+  <link rel="shortcut icon" href="/image/siwan_logo.png">
+  <link rel="stylesheet" href="./library.css">
+</head>
+
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="logo">
+        <div class="mark">GEC</div>
+        <div>
+          <div class="site-title">Government Engineering College, Siwan</div>
+          <div style="font-size:12px;color:var(--muted)">Central Library</div>
+        </div>
+      </div>
+      <nav class="top-nav">
+        <a href="/">Home</a>
+        <a href="#about">About</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="hamburger" aria-label="menu" onclick="toggleSidebar()">☰</button>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar" id="sidebar">
+        <h3>Facilities</h3>
+        <ul class="fac-list">
+          <li><a href="#" class="active">Central Library</a></li>
+          <li><a href="#">Club</a></li>
+          <li><a href="#">Computer Center</a></li>
+          <li><a href="#">Hostels</a></li>
+          <li><a href="#">Medical Facilities</a></li>
+          <li><a href="#">Sports Facilities</a></li>
+          <li><a href="#">Wi-Fi</a></li>
+          <li><a href="#">Bank</a></li>
+          <li><a href="#">Guest House</a></li>
+          <li><a href="#">Gymnasium</a></li>
+        </ul>
+      </aside>
+
+      <main class="card">
+        <section class="hero">
+          <div class="banner">
+            <div>
+              <div ><img src="./image/siwan Library.jpg" alt=""></div>
+            </div>
+          </div>
+
+          <div class="quick">
+            <p><strong>Location</strong><br>Central Library, Government Engineering College Siwan, Bihar, India</p>
+            <p><strong>Contact</strong><br>Phone: +91 123 456 7890<br>Email: support@gecsiwan.ac.in</p>
+            <p><strong>Hours</strong><br>Mon - Sat: 10:00 AM - 8:00 PM<br>Sun: Closed</p>
+            <p><a href="#book-allocation" class="tag">Book Allocation Portal</a></p>
+          </div>
+        </section>
+        
+        <hr>
+        
+        <section id="about" class="section">
+          <h4>About the Central Library</h4>
+          <p>
+            The Central Library at Government Engineering College, Siwan, serves as the academic heart of the institution,
+            providing a vast repository of knowledge to support the educational and research needs of our students,
+            faculty, and staff. Our mission is to foster a culture of learning and intellectual curiosity by offering a
+            diverse collection of resources and state-of-the-art facilities. We are committed to providing a conducive
+            environment for study and research, enabling academic excellence and professional growth.
+          </p>
+
+          <div class="info-grid" style="margin-top:12px">
+            <div class="card-small">
+              <strong>Our Vision</strong>
+              <p style="color:var(--muted);margin-top:6px">
+                To be a leading resource center that empowers the GEC Siwan community with innovative services and
+                comprehensive information, driving research and lifelong learning.
+              </p>
+            </div>
+            <div class="card-small">
+              <strong>Our Mission</strong>
+              <p style="color:var(--muted);margin-top:6px">
+                To acquire, organize, and disseminate information resources effectively while providing a welcoming and
+                tech-enabled space for collaborative and individual study.
+              </p>
+            </div>
+          </div>
+        </section>
+        
+        <hr>
+        
+        <section id="collections" class="section">
+            <h4>Library Collections</h4>
+            <div class="info-grid" style="margin-top:12px">
+                <div class="card-small">
+                    <strong>Print Collection</strong>
+                    <p style="color:var(--muted);margin-top:6px">
+                        A comprehensive collection of textbooks, reference books, and journals spanning all engineering
+                        disciplines and general knowledge.
+                    </p>
+                </div>
+                <div class="card-small">
+                    <strong>Digital Resources</strong>
+                    <p style="color:var(--muted);margin-top:6px">
+                        Access to a wide range of e-books, e-journals, and online databases, providing 24/7 access to
+                        scholarly information.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="catalog" class="section">
+          <h4>Book Catalog</h4>
+          <p>Search our extensive catalog of books and resources below. You can filter by title or author to find
+            what you need.</p>
+          <div class="catalog-controls">
+            <div class="search"><input id="search" placeholder="Search books by title or author..." oninput="filterBooks()"></div>
+            <div><button onclick="resetSearch()">Reset</button></div>
+          </div>
+
+          <div class="books-grid" id="booksGrid" style="margin-top:12px">
+            <div class="book" data-title="Introduction to Engineering" data-author="R. Kumar">
+              <div class="thumb">Img</div>
+              <div class="meta">
+                <h5>Introduction to Engineering</h5>
+                <div style="font-size:13px;color:var(--muted)">R. Kumar</div>
+                <div style="margin-top:8px"><span class="tag">Available</span></div>
+              </div>
+            </div>
+
+            <div class="book" data-title="Data Structures" data-author="A. Singh">
+              <div class="thumb">Img</div>
+              <div class="meta">
+                <h5>Data Structures</h5>
+                <div style="font-size:13px;color:var(--muted)">A. Singh</div>
+                <div style="margin-top:8px"><span class="tag">Checked Out</span></div>
+              </div>
+            </div>
+
+            <div class="book" data-title="Database Systems" data-author="S. Verma">
+              <div class="thumb">Img</div>
+              <div class="meta">
+                <h5>Database Systems</h5>
+                <div style="font-size:13px;color:var(--muted)">S. Verma</div>
+                <div style="margin-top:8px"><span class="tag">Available</span></div>
+              </div>
+            </div>
+
+            <div class="book" data-title="Introduction to IoT" data-author="P. Sharma">
+              <div class="thumb">Img</div>
+              <div class="meta">
+                <h5>Introduction to IoT</h5>
+                <div style="font-size:13px;color:var(--muted)">P. Sharma</div>
+                <div style="margin-top:8px"><span class="tag">Available</span></div>
+              </div>
+            </div>
+
+            <div class="book" data-title="Operating Systems" data-author="L. Gupta">
+              <div class="thumb">Img</div>
+              <div class="meta">
+                <h5>Operating Systems</h5>
+                <div style="font-size:13px;color:var(--muted)">L. Gupta</div>
+                <div style="margin-top:8px"><span class="tag">Available</span></div>
+              </div>
+            </div>
+
+            <div class="book" data-title="Computer Networks" data-author="D. Roy">
+              <div class="thumb">Img</div>
+              <div class="meta">
+                <h5>Computer Networks</h5>
+                <div style="font-size:13px;color:var(--muted)">D. Roy</div>
+                <div style="margin-top:8px"><span class="tag">Checked Out</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <hr>
+        
+        <section id="book-allocation" class="section">
+          <h4>Book Allocation &amp; Membership</h4>
+          <p>
+            The library offers a seamless online system for students and faculty to allocate and reserve books.
+            New members can register for library access and learn about our borrowing policies and procedures.
+          </p>
+          <p><a href="#" class="tag">Open Book Allocation Portal</a></p>
+        </section>
+        
+        <hr>
+
+        <section class="section">
+          <h4>Facilities &amp; Amenities</h4>
+          <p>Our library is equipped with modern facilities to support a variety of study preferences.</p>
+          <div class="fac-grid" style="margin-top:12px">
+            <div class="fac-item">High-Speed Internet Access</div>
+            <div class="fac-item">Computer Labs</div>
+            <div class="fac-item">Group Study Areas</div>
+            <div class="fac-item">Photocopying &amp; Printing</div>
+            <div class="fac-item">24/7 E-Resource Access</div>
+            <div class="fac-item">Study Carrels &amp; Quiet Zones</div>
+          </div>
+        </section>
+        
+        <hr>
+
+        <section class="section">
+          <h4>Support &amp; Assistance</h4>
+          <ul>
+            <li>**Reference Desk:** Our dedicated staff are available to assist with research and finding resources.</li>
+            <li>**Technical Support:** Get help with accessing our digital resources and using library equipment.</li>
+            <li>**Book Reservation:** Reserve a book online before it becomes available.</li>
+            <li>**Inter-Library Loan:** Request materials not available in our collection from other institutions.</li>
+          </ul>
+        </section>
+        
+        <hr>
+
+        <section id="news" class="section">
+            <h4>News &amp; Events</h4>
+            <div class="info-grid" style="margin-top:12px">
+                <div class="card-small">
+                    <strong>New E-Journal Subscription</strong>
+                    <p style="color:var(--muted);margin-top:6px">
+                        We have added a new subscription to the IEEE Xplore Digital Library. Students and faculty can now
+                        access thousands of new journals and conference papers.
+                    </p>
+                </div>
+                <div class="card-small">
+                    <strong>Research Workshop</strong>
+                    <p style="color:var(--muted);margin-top:6px">
+                        Join our upcoming workshop on "Effective Literature Review Techniques" on October 25th at 2:00 PM
+                        in the main reading hall.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <hr>
+
+        <section id="contact" class="section">
+          <h4>Contact &amp; Location</h4>
+          <div style="display:grid;grid-template-columns:1fr 320px;gap:12px;align-items:start">
+            <div>
+              <p>
+                <strong>Address</strong><br>
+                Campus of Siwan Engineering College, CSI Sutra Mill Factory, Siwan Bihar 841226
+              </p>
+              <p>
+                <strong>Phone</strong><br>
+                +91 (06152) 175 62
+              </p>
+              <p>
+                <strong>Email</strong><br>
+                gecsiwan@gmail.com
+              </p>
+              <p>
+                <strong>Operating Hours</strong><br>
+                Mon - Sat: 10:00 AM - 8:00 PM<br>
+                Sun: Closed
+              </p>
+            </div>
+            <div>
+              <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3586.0943088983866!2d84.328884!3d26.225333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39930f5dc3d6b3fd%3A0x3c42e6f88e3a51f5!2sGovernment%20Engineering%20College%20Siwan!5e0!3m2!1sen!2sin!4v1691574523456!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container" style="max-width:var(--max-width);padding:0">
+        <div style="display:flex;gap:18px;align-items:flex-start">
+          <div style="flex:1">
+            <h3>GEC SIWAN</h3>
+            <p style="color:rgba(255,255,255,0.8)">
+              Government Engineering College, Siwan is a government engineering college in Siwan, Bihar, India.
+              Established in 2020, the college is affiliated with Aryabhatta Knowledge University, Patna.
+            </p>
+            <div style="margin-top:12px">
+              <strong>Key Offerings</strong>
+              <ul style="color:rgba(255,255,255,0.9)">
+                <li>Admissions</li>
+                <li>Library Services</li>
+                <li>Hostel Facilities</li>
+                <li>Career Placement</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="width:280px">
+            <h4>Important Links</h4>
+            <ul style="color:rgba(255,255,255,0.9)">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Academic Programs</a></li>
+              <li><a href="#">Campus Amenities</a></li>
+            </ul>
+          </div>
+
+          <div style="width:280px">
+            <h4>Contact Us</h4>
+            <p style="color:rgba(255,255,255,0.9)">
+              Campus of Siwan Engineering College, CSI Sutra Mill Factory, Siwan Bihar 841226<br>
+              Phone: +91 (06152) 175 62<br>
+              Email: gecsiwan@gmail.com
+            </p>
+            <div class="socials">
+              <div style="background:rgba(255,255,255,0.1);padding:8px;border-radius:6px">f</div>
+              <div style="background:rgba(255,255,255,0.1);padding:8px;border-radius:6px">t</div>
+              <div style="background:rgba(255,255,255,0.1);padding:8px;border-radius:6px">ig</div>
+              <div style="background:rgba(255,255,255,0.1);padding:8px;border-radius:6px">in</div>
+            </div>
+            <p style="margin-top:10px;color:rgba(255,255,255,0.6);font-size:13px">
+              © 2024 GEC Siwan. All rights reserved.<br>
+              Site developed by GeoGrafix Inc.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./library.js"></script>
+
+
+</body></html>
