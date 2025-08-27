@@ -123,6 +123,11 @@ aside.sidebar {
   color: var(--accent);
   font-weight: 600
 }
+li:hover{
+  background: linear-gradient(90deg, rgba(4, 99, 242, 0.372), rgba(17, 84, 185, 0.06));
+  border: 1px solid rgba(3, 101, 247, 0.08);
+  border-radius: 10px;
+}
 .section {
   margin-top: 16px
 }

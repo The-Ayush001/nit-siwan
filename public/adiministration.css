@@ -45,7 +45,6 @@ header.site-header {
   align-items: center;
   gap: 12px
 }
-
 .logo .mark {
   width: 52px;
   height: 52px;
@@ -57,18 +56,15 @@ header.site-header {
   color: #fff;
   font-weight: 700
 }
-
 .site-title {
   font-size: 18px;
   font-weight: 700
 }
-
 nav.top-nav {
   margin-left: auto;
   display: flex;
   gap: 14px
 }
-
 .hamburger {
   display: none;
   border: 0;
@@ -123,6 +119,11 @@ aside.sidebar {
   color: var(--accent);
   font-weight: 600
 }
+li:hover{
+  background: linear-gradient(90deg, rgba(4, 99, 242, 0.372), rgba(17, 84, 185, 0.06));
+  border: 1px solid rgba(3, 101, 247, 0.08);
+  border-radius: 10px;
+}
 
 .section {
   margin-top: 16px
@@ -137,7 +138,6 @@ aside.sidebar {
   line-height: 2.5cap;
   margin: 10px 0px 10px 0px;
   font-size: large;
-  color: #70a4d1;
 }
 
 .info-grid {
@@ -147,7 +147,7 @@ aside.sidebar {
 }
 
 .card-small {
-  background:#c3ddf3;
+  background:#0c6dc3;
   color: white;
   font-size: x-large;
   padding: 12px;

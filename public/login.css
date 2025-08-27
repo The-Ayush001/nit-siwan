@@ -13,7 +13,7 @@
     .child1{
       height: 50cap;
       width: 90cap;
-      background-color: #eff1fc;
+      background-color: #d9ddf6;
       border: 2px solid orange;
       border-radius: 30px;
       display: flex;
@@ -59,7 +59,7 @@
       align-items: center;
       gap: 3px;
     }
-    button{
+    #button{
       height: 3cap;
       width: 10cap;
       font-size: x-large;

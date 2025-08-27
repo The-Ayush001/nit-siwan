@@ -48,6 +48,11 @@ select {
   font-size: 110%;
   cursor: pointer;
 }
+li:hover{
+  background: linear-gradient(90deg, rgba(4, 99, 242, 0.372), rgba(17, 84, 185, 0.06));
+  border: 1px solid rgba(3, 101, 247, 0.08);
+  border-radius: 20px;
+}
 .Placement,
 .gallery {
   height: 70%;
@@ -279,6 +284,10 @@ h1 {
   border-radius: 20px;
   overflow: hidden;
 }
+.div_image:hover{
+  transform: scale(1.05);
+  transition: transform 1s ease;
+}
 .show_more {
   height: 4cap;
   width: 10cap;
@@ -320,6 +329,10 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.contenar:hover{
+  transform: scale(1.1);
+  transition: transform 1s ease;
 }
 .box4_h2 {
   color: #021760;
