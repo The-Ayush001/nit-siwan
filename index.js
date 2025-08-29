@@ -1,7 +1,8 @@
 const express = require('express');
-
 const app = express();
+const bodyParser = require('body-parser'); // not required in latest express but works
 
+app.use(bodyParser.urlencoded()); // to parse form data
 
 const homeRoute = require('./router/Home');
 const libraryRouter = require('./router/Library');
@@ -11,7 +12,7 @@ const CSERouter = require('./router/CSE');
 
 app.use(homeRoute);
 app.get("/test", (req, res)=>{
-res.send("Express is working!")
+  res.send("Express is working!")
 })
 app.use(libraryRouter);
 app.use(loginRoute);
@@ -24,4 +25,4 @@ app.listen(PORT,()=>{
 })
 
 
-module.exports = app; // 👈 Important for Vercel
+module.exports = app;
